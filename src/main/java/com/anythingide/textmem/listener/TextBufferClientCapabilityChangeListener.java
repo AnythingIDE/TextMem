@@ -1,9 +1,11 @@
 package com.anythingide.textmem.listener;
 
+import org.reactivestreams.Publisher;
+
 import com.anythingide.textmem.TextBufferClientCapabilityType;
 
 public interface TextBufferClientCapabilityChangeListener {
 
-	void onCapabilityAvailable(TextBufferClientCapabilityType capabilityType);
+	Publisher<Void> onCapabilityAvailable(TextBufferClientCapabilityType capabilityType);
 	
 }
